@@ -1,22 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [add, setAdd] = useState([])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="app-header">
+        <input type placeholder='enter your todo task here...'  className='input'/>
+        <button className='btn add' >Add</button>
+        <button className='btn del'>Delete</button>
+        <button className='btn edit'>Edit</button>
       </header>
     </div>
   );
